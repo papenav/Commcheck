@@ -1,0 +1,17 @@
+# Cronograma maestro editable
+
+`Cronograma_maestro_cliente_v6.xlsx` es la versión de trabajo vigente para revisar con el cliente. No está aprobado ni representa un compromiso contractual de fecha. Las versiones 1 a 5 se conservan como antecedentes y no se modifican.
+
+- Inicio registrado: 9 de septiembre de 2026. Nueva fecha límite solicitada: producción el **31 de marzo de 2027**. El escenario V6 es acelerado y de alto riesgo; marzo no es un compromiso aprobado.
+- El **alcance objetivo de la primera entrega** es la operación completa de TM, Precomisionamiento, Comisionamiento y PEM, con sus controles, resultados y traspasos. No se limita a TM → Precomisionamiento.
+- La demo oficial describe TM con más profundidad y las etapas siguientes parcialmente. La definición funcional adicional de Precom, Com y PEM es parte del trabajo inicial, no una segunda fase del producto. No se inventarán reglas faltantes: deben aprobarse con el cliente.
+- En `Cronograma`, las columnas **Inicio**, **Fin** y **Persona confirmada** son editables. **Duración** y **Semana cierre** son calculadas. Los responsables por rol son propuestas hasta asignar nombres.
+- `Gantt semanal` refleja automáticamente las fechas del cronograma. Cada columna representa lunes a domingo; el día exacto de término está en **Fin**, no en el símbolo semanal.
+- Las actividades transversales y algunas dependencias pueden solaparse por entregas parciales; esas relaciones deberán acordarse antes de fijar la línea base.
+- La versión 6 conserva **Construcción → Reportabilidad → Usuarios y acceso a la plataforma**. Este último bloque reúne definición de perfiles, login y recuperación, administración central y siete tareas de asociación de permisos: Proyecto, Activos, Etapas/Especialidades, Controles/Caminatas, Resultados/Evidencias, Aprobaciones/Traspasos y Reportes/Repositorios. Construcción y Reportabilidad no incluyen esas tareas. Se conserva el caso «acceso a Proyecto sin acceso a Activos» como prueba obligatoria.
+- Aunque la implementación de acceso ocurre después, la arquitectura inicial debe fijar el contrato de autorización y la estrategia de identidades de prueba para no rehacer los componentes. El hito de Construcción es funcional, **no autoriza QA ni PROD** sin login y permisos integrados.
+- Para llegar a marzo, usuarios/accesos se comprime desde el 8 de febrero al 12 de marzo. Las asociaciones de permisos corren en varios frentes; las pruebas de integración arrancan por entregas parciales y la aceptación del cliente se solapa con las pruebas finales. QA queda del 15 al 26 de marzo; PROD del 29 al 31 de marzo. Esto requiere equipo suficiente, cliente disponible y decisiones rápidas. No hay margen amplio de corrección; si no se cumplen esas condiciones, se debe replanificar sin recortar alcance, seguridad o pruebas.
+- Los controles adicionales identificados en `02-capacidades-pendientes.md` aún no tienen fecha ni compromiso. No deben presentarse como incluidos en V1 sin aprobar alcance, criterios y capacidad.
+- La futura presentación se construirá con la versión aprobada de este Excel y contendrá también el avance ya realizado. No sustituirá el cronograma editable.
+
+Fuentes usadas para esta propuesta: el plan de actividades aportado por el usuario, el cronograma maestro de `contexto/04-cronograma-maestro.md` y la definición funcional documentada en el directorio oficial. El archivo aportado `plan de trabajo commcheck.xlsx` se conserva intacto.
